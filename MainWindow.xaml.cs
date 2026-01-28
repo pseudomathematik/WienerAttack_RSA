@@ -6,10 +6,8 @@ using WpfApp_Wienner_Attack_Bool;
 
 
 namespace WpfApp_Wienner_Attack
-	{
-	/// <summary>
-	/// Логика взаимодействия для MainWindow.xaml
-	/// </summary>
+{
+	
 	public partial class MainWindow : Window
 	{
 		public MainWindow()
@@ -76,7 +74,7 @@ namespace WpfApp_Wienner_Attack
 				return;
 			}
 			textBox_Process.Text += ("Используем расширенный перебор...\n");
-			int DMAX = 20000;
+			uint DMAX = 40000;
 			for (BigInteger d = 1; d <= DMAX; d++)
 			{
 				BigInteger numerator = e_BigInt * d - 1;
