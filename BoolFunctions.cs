@@ -17,7 +17,7 @@ namespace WpfApp_Wienner_Attack_Bool
 
 			if (phiCandidate <= 0 || phiCandidate >= N) return false;
 
-			BigInteger s = N - phiCandidate + 1; // p + q
+			BigInteger s = N - phiCandidate + 1; 
 			if (s <= 0) return false;
 
 			BigInteger D = s * s - 4 * N;
@@ -26,13 +26,12 @@ namespace WpfApp_Wienner_Attack_Bool
 
 			BigInteger r = BigIntegerFunctions.BISqrt(D);
 
-			// (s +/- r) must be even to get integer p,q
+			
 			if (((s + r) & 1) != 0 || ((s - r) & 1) != 0) return false;
 
 			p = (s + r) / 2;
 			q = (s - r) / 2;
 
-			// must be positive and multiply to N
 			if (p <= 1 || q <= 1) return false;
 			if (p * q != N) return false;
 

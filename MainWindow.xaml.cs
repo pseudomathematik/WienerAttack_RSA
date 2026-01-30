@@ -57,7 +57,7 @@ namespace WpfApp_Wienner_Attack
 				if (!BoolFunctions.TryRecoverPQFromPhi(n, phiCandidate, out BigInteger p, out BigInteger q))
 					continue;
 
-				// найдены корректные p,q => вычислим реальный d по phi
+				
 				BigInteger phiActual = (p - 1) * (q - 1);
 				textBox_Process.Text += ("Атака Винера завершена  Успешно!\n");
 				textBox_Process.Text += ("Найдены:\n");
@@ -80,7 +80,7 @@ namespace WpfApp_Wienner_Attack
 				BigInteger numerator = e_BigInt * d - 1;
 				if (numerator <= 0) continue;
 
-				// оптимизация: перебор делителей до sqrt(numerator) и рассмотрение пары (k, numerator/k)
+				
 				BigInteger limitK = (BigInteger)Math.Sqrt((double)numerator) + 1;
 				for (BigInteger k = 1; k <= d; k++)
 				{
