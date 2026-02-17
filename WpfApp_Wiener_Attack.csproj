@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="BigIntegerFunctions.cs" />
     <Compile Include="BoolFunctions.cs" />
+    <Compile Include="Info.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

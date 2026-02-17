@@ -6,23 +6,24 @@
         xmlns:local="clr-namespace:WpfApp_Wienner_Attack"
         mc:Ignorable="d"
         Title="Атака Винера на RSA" Height="380" Width="800" FontSize="11" ResizeMode="NoResize">
-	<Canvas Margin="0,0,0,-6">
-		<Label Content="Для атаки Винера на RSA введите известные параметры e,n" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="314" Height="27"/>
-		<Label Content="e = " Canvas.Left="10" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<Label Content="n = " Canvas.Left="10" Canvas.Top="94" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-		<TextBox x:Name="textBox_e_Input" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="57" Width="108" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<TextBox x:Name="textBox_n_Input" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="98" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-		<Label Content="В результате атаки получены следующие параметры:" Canvas.Top="174" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-		<Label Content="Атака Винера....." Canvas.Left="337" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<TextBox x:Name="textBox_Process" Canvas.Left="337" TextWrapping="Wrap" Canvas.Top="42" Width="442" Height="303" HorizontalAlignment="Left" VerticalAlignment="Center" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
-		<Label Content="p = " Canvas.Left="9" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.562,1.127"/>
-		<Label Content="q = " Canvas.Left="10" Canvas.Top="231" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="5.197,0.918"/>
-		<Label Content="φ = " Canvas.Left="10" Canvas.Top="266" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-		<Label Content="d = " Canvas.Left="10" Canvas.Top="296" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<TextBox x:Name="textBox_p_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="204" Width="108" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False"/>
-		<TextBox x:Name="textBox_q_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="235" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
-		<TextBox x:Name="textBox_phi_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="270" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
-		<TextBox x:Name="textBox_d_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="300" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
-		<Button x:Name="button_WiennerAttack" Content="Начать атаку" Canvas.Left="36" Canvas.Top="142" Height="27" Width="114" RenderTransformOrigin="0.228,0.615" HorizontalAlignment="Left" VerticalAlignment="Center" Click="button_WiennerAttack_Click"/>
-	</Canvas>
+    <Canvas Margin="0,0,0,-6">
+        <Label Content="Для атаки Винера на RSA введите известные параметры e,n" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="314" Height="27"/>
+        <Label Content="e = " Canvas.Left="10" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="n = " Canvas.Left="10" Canvas.Top="94" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_e_Input" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="57" Width="108" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_n_Input" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="98" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="В результате атаки получены следующие параметры:" Canvas.Top="174" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Атака Винера....." Canvas.Left="337" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Process" Canvas.Left="337" TextWrapping="Wrap" Canvas.Top="42" Width="442" Height="303" HorizontalAlignment="Left" VerticalAlignment="Center" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        <Label Content="p = " Canvas.Left="9" Canvas.Top="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.562,1.127"/>
+        <Label Content="q = " Canvas.Left="10" Canvas.Top="231" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="5.197,0.918"/>
+        <Label Content="φ = " Canvas.Left="10" Canvas.Top="266" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="d = " Canvas.Left="10" Canvas.Top="296" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_p_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="204" Width="108" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="textBox_q_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="235" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="textBox_phi_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="270" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="textBox_d_Output" Canvas.Left="39" TextWrapping="Wrap" Canvas.Top="300" Width="108" HorizontalAlignment="Center" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="button_WiennerAttack" Content="Начать атаку" Canvas.Left="36" Canvas.Top="142" Height="27" Width="114" RenderTransformOrigin="0.228,0.615" HorizontalAlignment="Left" VerticalAlignment="Center" Click="button_WiennerAttack_Click"/>
+        <Button x:Name="button_Info" Content="Справка" Canvas.Left="184" Canvas.Top="142" RenderTransformOrigin="0.592,0.002" Height="27" Width="106" HorizontalAlignment="Center" VerticalAlignment="Top" Click="button_Info_Click"/>
+    </Canvas>
 </Window>

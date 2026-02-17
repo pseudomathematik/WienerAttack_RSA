@@ -3,6 +3,7 @@ using System.Numerics;
 using System.Windows;
 using WpfApp_Wienner_Attack_BigInteger;
 using WpfApp_Wienner_Attack_Bool;
+using Wiener_Attack_Info;
 
 
 namespace WpfApp_Wienner_Attack
@@ -14,16 +15,31 @@ namespace WpfApp_Wienner_Attack
 		{
 			InitializeComponent();
 		}
+		private void button_Info_Click(object sender, RoutedEventArgs e)
+		{
+			Info.ShowInfo();
+			return;
+		}
 		private void button_WiennerAttack_Click(object sender, RoutedEventArgs e)
 		{
 			textBox_Process.Clear();
 			String e_s = textBox_e_Input.Text;
 			String n_s = textBox_n_Input.Text;
+			//проверки
 			if (string.IsNullOrEmpty(textBox_e_Input.Text) || (string.IsNullOrEmpty(textBox_n_Input.Text)))
 			{
 				MessageBox.Show("Введены не все параметры  для взлома шифрования RSA!", "Предупреждение", MessageBoxButton.OK);
 				return;
 			}
+			if(!ulong.TryParse(e_s,out ulong e_ul)||!ulong.TryParse(n_s,out ulong n_ul))
+			{
+                MessageBox.Show(
+                     "Параметры  открытого ключа RSA должны быть целыми положительными числами!",
+                    "Ошибка ввода",
+                     MessageBoxButton.OK);
+                return;
+            }
+			
 			BigInteger e_BigInt = BigInteger.Parse(e_s);
 			BigInteger n = BigInteger.Parse(n_s);
 			textBox_Process.Text += ($"Атака Винера для e = {e_s},n={n_s}...\n");
